@@ -1,0 +1,11 @@
+<odoo>
+    <record model="ir.actions.act_window" id="patient_menu_action">
+        <field name="name">Patient</field>
+        <field name="res_model">hospital_mgmt.patient</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p>Create new Patient
+            </p>
+        </field>
+    </record>
+</odoo>

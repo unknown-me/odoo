@@ -1,0 +1,42 @@
+<odoo>
+    <record model="ir.ui.view" id="staff_views_kanban">
+        <field name="name">staff.views.kanban</field>
+        <field name="model">hospital_mgmt.staff</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="staff_image"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <div class="o_kanban_image_fill_left o_kanban_image_full"
+                                 t-attf-style="background-image:url('#{kanban_image('hospital_mgmt.staff', 'staff_image', record.id.raw_value)}')" role="img"/>
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title"><field name="staff_id"/></strong>
+                                <div class="o_kanban_tags_section"/>
+                                <ul>
+                                    <li>Name: <field name="name"/></li>
+                                    <li>Blood Group: <field name="blood_group"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="staff_views_tree" model="ir.ui.view">
+        <field name="name">staff.views.tree</field>
+        <field name="model">hospital_mgmt.staff</field>
+        <field name="arch" type="xml">
+            <tree string="Staff">
+                <field name="staff_id" string="Staff Id"/>
+                <field name="name" string="Name"/>
+                <field name="blood_group" string="Blood Group"/>
+                <field name="gender" string="Gender"/>
+                <field name="staff_type" string="Staff Type"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

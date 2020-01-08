@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hospital_mgmt_staff,hospital_mgmt.staff,model_hospital_mgmt_staff,,1,1,1,1
+hospital_mgmt_patient,hospital_mgmt.patient,model_hospital_mgmt_patient,,1,1,1,1
+hospital_mgmt_doctor_type,hospital_mgmt.doctor_type,model_hospital_mgmt_doctor_type,,1,1,1,1
+hospital_mgmt_doctor,hospital_mgmt.doctor,model_hospital_mgmt_doctor,,1,1,1,1
+hospital_mgmt_specialization,hospital_mgmt.specialization,model_hospital_mgmt_specialization,,1,1,1,1
+hospital_mgmt_staff_type,hospital_mgmt.staff_type,model_hospital_mgmt_staff_type,,1,1,1,1
+hospital_mgmt_patient,hospital_mgmt.patient,model_hospital_mgmt_patient,,1,1,1,1

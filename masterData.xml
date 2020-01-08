@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="doctor_master_data" model="hospital_mgmt.staff_type">
+            <field name="type_name">Doctor</field>
+        </record>
+    </data>
+</odoo>

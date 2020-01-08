@@ -1,0 +1,21 @@
+<odoo>
+    <record id="sequence_doctor_id" model="ir.sequence">
+        <field name ="name">Doctor Id</field>
+        <field name="code">sequence.doctor_id</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">D</field>
+        <field name="padding">6</field>
+        <field name="number_increment">1</field>
+        <field name="implementation">no_gap</field>
+    </record>
+
+    <record id="sequence_other_staff_id" model="ir.sequence">
+        <field name ="name">Other Staff Id</field>
+        <field name="code">sequence.other_staff_id</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">S</field>
+        <field name="padding">6</field>
+        <field name="number_increment">1</field>
+        <field name="implementation">no_gap</field>
+    </record>
+</odoo>

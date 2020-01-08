@@ -1,0 +1,54 @@
+<odoo>
+       <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+    <record model="ir.actions.act_window" id="doctor_menu_action">
+        <field name="name">Doctor</field>
+        <field name="res_model">hospital_mgmt.staff</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <!--<field name="domain">[('type_name', '=', 1)]</field>-->
+        <!--<field name="code">action=env.get('hospital_mgmt.staff').custom_doctor_view_action()</field>-->
+        <field name="help" type="html">
+            <p>Create new Doctor
+            </p>
+        </field>
+        <!--<field name="context" eval='{"default_staff_type":"Doctor"}'/>-->
+    </record>
+
+    <record model="ir.actions.act_window" id="staff_type_menu_action">
+        <field name="name">Staff Type</field>
+        <field name="res_model">hospital_mgmt.staff_type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Create new Staff Type
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="other_staff_menu_action">
+        <field name="name">Other Staff</field>
+        <field name="res_model">hospital_mgmt.staff</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Create new Staff member
+            </p>
+        </field>
+    </record>
+
+    <record id="action_staff_view_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="0"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="staff_views_kanban"/>
+        <field name="act_window_id" ref="doctor_menu_action"/>
+    </record>
+
+    <record id="action_staff_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="staff_views_tree"/>
+        <field name="act_window_id" ref="doctor_menu_action"/>
+    </record>
+
+</odoo>

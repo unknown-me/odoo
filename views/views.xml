@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="hospital_root_menu" name="Hospital Management"/>
+    <menuitem id="staff_menu" name="Staff" parent="hospital_root_menu"/>
+    <menuitem id="doctor_menu" name="Doctors" parent="staff_menu" action="doctor_menu_action" sequence="0"/>
+    <menuitem id="other_staff_menu" name="Other Staff" parent="staff_menu" action="other_staff_menu_action" sequence="1"/>
+    <menuitem id="staff_type_menu" name="Staff Type" parent="staff_menu" action="staff_type_menu_action" sequence="2"/>
+
+    <menuitem id="patient_menu" name="Patient" parent="hospital_root_menu" action="patient_menu_action"/>
+</odoo>
